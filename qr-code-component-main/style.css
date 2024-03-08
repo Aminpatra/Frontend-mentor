@@ -1,0 +1,87 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+/* style extention :  Synthwave */
+
+.attribution a {
+color: hsl(228, 45%, 44%);
+}
+
+*,*::after,*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+:root {
+--White: hsl(0, 0%, 100%);
+--Light-gray: hsl(212, 45%, 89%);
+--Grayish-blue: hsl(220, 15%, 55%);
+--Dark-blue: hsl(218, 44%, 22%);
+--font-mid: 400;
+--font-bold: 700;
+--re-very: 1.25rem;
+--re-mid: 0.625rem;
+}
+
+body {
+    font-size: 15px;
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vw - 1px);
+    background-color: var(--Light-gray);
+    text-align: center;
+}
+@media (min-width: 300px) and (max-width: 600px) {
+    body {
+        height: 667px;
+    }
+}
+
+.contanier {
+    margin: auto auto;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--White);
+    padding: var(--re-mid);
+    border-radius: var(--re-very);
+}
+
+.contanier  img {
+    margin: 10px auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: var(--re-mid);
+}
+
+.contanier .details {
+    margin: 20px;
+}
+
+.contanier h1 {
+    color: var(--Dark-blue);
+    font-size: var(--re-very);
+    font-weight: var(--font-bold);
+    margin: -10px 10px 0;
+    width: 288px;
+    height: 65px;
+}
+
+.contanier p {
+    width: 265px;
+    height: 57px;
+    margin: -5px auto 0;
+    color: var(--Grayish-blue);
+}
