@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+    --font-mid: 400;
+    --font-bold: 700;
+    --re-mid: 0.625rem;
+    --re-very: 1.25rem;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 18px;
+    background-color: var(--Dark-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-position: -60% 200%, 140% -110%;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+    height: calc(100vh - 1px);
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    body {
+        background-position: 116% 200%, -15% -110%;
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: var(--re-very);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.lower-part > img {
+    width: 96px;
+    height: 96px;
+    margin-top: -3.5rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: 5px solid white;
+    }
+
+.lower-part p {
+    color: var(--Dark-grayish-blue);
+    width: 50%;
+    margin: 0 auto;
+}
+
+.lower-part p span:first-of-type{
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: var(--font-bold);
+}
+
+.lower-part p span:last-of-type{
+    color: var(--Dark-grayish-blue);
+    font-weight: var(--font-mid);
+    font-size: 0.9rem;
+}
+
+.status { 
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--Dark-gray);
+    padding: 1rem;
+}
+
+.status p {
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: var(--font-bold);
+
+}
+
+.status span {
+    color: var(--Dark-grayish-blue);
+    font-size: 0.8rem;
+    display: block;
+    font-weight: var(--font-mid);
+}
