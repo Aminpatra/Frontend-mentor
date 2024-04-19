@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 44%, 25%);
+    font-size: 13px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --back-g: #DADAE5;
+    --font-light: 200;
+    --font-mid: 400;
+    --font-bold: 600;
+
+}
+
+body {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    display: grid;
+    place-content: center;
+    height: calc(100vh - 1px);
+    background-color: #dadae526;
+    margin-top: 4rem;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+@media (min-width: 1150px) {
+    main {
+        min-width: 1110px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1150px) {
+    main {
+        max-width: 800px;
+    }
+}
+
+
+.title {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+        color: #4D4F62;
+        font-size: 24px;
+    }
+
+    span {
+        font-weight: var(--font-light);
+        display: block;
+    }
+
+    p {
+        margin: 0.5rem auto;
+        line-height: 1.6;
+        color: var(--Grayish-Blue);
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 700px) {
+    .title {
+        h2 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 15px;
+            width: 540px;
+        }
+    }
+}
+
+
+@media (min-width: 1150px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(3, 250px);
+        gap: 0 30px;
+        margin-top: -6rem;
+
+        h3 {
+            font-size: 20px;
+        }
+
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1150px) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .cards div {
+        margin: unset;
+        width: unset;
+        height: unset;
+    }
+}
+
+.cards div {
+    background-color: var(--Very-Light-Gray);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 311px;
+    height: 222px;
+    border-top: 4px solid;
+    border-radius: 0.625rem;
+    box-shadow: 2px 6px 13px #0000004a;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    h3 {
+        font-weight: var(--font-bold);
+        color: #4D4F62;
+        font-size: 20px;
+    }
+
+    p {
+        font-weight: var(--font-light);
+        color: var(--Grayish-Blue);
+        font-size: 13px;
+        margin-top: 0.5rem;
+    }
+
+    img {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
+@media (min-width: 1150px) {
+    .cards div {
+        width: unset;
+        height: unset;
+    }
+}
+
+
+.cards div:nth-of-type(1) {
+    border-color: var(--Cyan);
+}
+
+.cards div:nth-of-type(2) {
+    border-color: var(--Red);
+}
+
+.cards div:nth-of-type(3) {
+    border-color: var(--Orange);
+}
+
+.cards div:nth-of-type(4) {
+    border-color: var(--Blue);
+}
+
+.cards div:nth-of-type(1):hover,
+.cards div:nth-of-type(2):hover,
+.cards div:nth-of-type(3):hover,
+.cards div:nth-of-type(4):hover {
+    box-shadow: 2px 6px 5px #0000004a;
+    cursor: pointer;
+    transform: translate(1px, 1px);
+}
+
+
+@media (min-width: 1150px) {
+    .cards div:nth-of-type(1) {
+        grid-row: 2;
+    }
+
+    .cards div:nth-of-type(2) {
+        grid-column: 2;
+        margin-top: 7rem;
+        margin-bottom: -7rem;
+    }
+
+    .cards div:nth-of-type(3) {
+        grid-column: 2;
+        grid-row: 3;
+        margin-top: -7rem;
+        margin-bottom: 7rem;
+    }
+
+    .cards div:nth-of-type(4) {
+        grid-row: 2;
+        grid-column: 3;
+    }
+}
